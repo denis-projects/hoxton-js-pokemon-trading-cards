@@ -31,15 +31,44 @@
 console.log(data);
 
 const liEl = document.createElement('li')
-document.body.append(liEl)
+document.querySelector(".cards").prepend(liEl)
 liEl.setAttribute("class", "card")
 
 const h2El = document.createElement('h2')
 h2El.textContent = 'Bulbasaur'
+h2El.setAttribute("class", "card--title")
 document.querySelector('li').prepend(h2El)
 
 const imgEl = document.createElement('img')
-document.querySelector('li').prepend(imgEl)
+imgEl.setAttribute("class", "card--img")
+document.querySelector('li').append(imgEl)
 imgEl.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
 
+const ulPower = document.createElement('ul')
+ulPower.setAttribute("class", "card--text")
+document.querySelector('li').append(ulPower)
+
+const liHp = document.createElement("li")
+liHp.textContent = "HP: 45"
+document.querySelector(".card--text").append(liHp)
+
+const liAttack = document.createElement("li")
+liAttack.textContent = "ATTACK: 49"
+document.querySelector(".card--text").append(liAttack)
+
+const liDefense = document.createElement("li")
+liDefense.textContent = "DEFENSE: 49"
+document.querySelector(".card--text").append(liDefense)
+
+const liSpecialAttack = document.createElement("li")
+liSpecialAttack.textContent = "SPECIAL-ATTACK: 65"
+document.querySelector(".card--text").append(liSpecialAttack)
+
+const liSpecialDefense = document.createElement("li")
+liSpecialDefense.textContent = "SPECIAL-DEFENSE: 65"
+document.querySelector(".card--text").append(liSpecialDefense)
+
+const liSpeed = document.createElement("li")
+liSpeed.textContent = "SPEED: 45"
+document.querySelector(".card--text").append(liSpeed)
 
