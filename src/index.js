@@ -21,11 +21,6 @@
 //</li>
 
 
-
-
-
-
-
 // - Use the exact CSS classes you see in the example HTML to obtain the same style for each card
 // - The cards should be nested inside <ul class="cards"></ul>
 // - Use the official-artwork object key as the images for the card. The images are all inside of the sprites key, in each pokemon object
@@ -34,3 +29,17 @@
 // - Render all the cards on the page that represents all the pokemons, recreating the same layout, using JS
 
 console.log(data);
+
+const liEl = document.createElement('li')
+document.body.append(liEl)
+liEl.setAttribute("class", "card")
+
+const h2El = document.createElement('h2')
+h2El.textContent = 'Bulbasaur'
+document.querySelector('li').prepend(h2El)
+
+const imgEl = document.createElement('img')
+document.querySelector('li').prepend(imgEl)
+imgEl.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+
+
