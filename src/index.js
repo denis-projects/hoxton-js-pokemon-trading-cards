@@ -94,3 +94,11 @@ createCards('Charmeleon',data[4].sprites.other['official-artwork'].front_default
 createCards('Charizard',data[5].sprites.other['official-artwork'].front_default)
 
 createCards('Squirtle',data[6].sprites.other['official-artwork'].front_default)
+
+createCards('Vartortle',data[7].sprites.other['official-artwork'].front_default)
+
+createCards('Blastoise',data[8].sprites.other['official-artwork'].front_default)
+
+createCards('Caterpie',data[9].sprites.other['official-artwork'].front_default)
+
+
