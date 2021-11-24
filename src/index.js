@@ -23,29 +23,25 @@
 
 // - Use the exact CSS classes you see in the example HTML to obtain the same style for each card
 // - The cards should be nested inside <ul class="cards"></ul>
-// - Use the official-artwork object key as the images for the card. The images are all inside of the sprites key, in each pokemon object
-// pokemon.sprites.other['official-artwork'].front_default
-
-// - Render all the cards on the page that represents all the pokemons, recreating the same layout, using JS
 
 console.log(data);
 
 
-function createCards() {
+function createCards(title, image) {
     const liEl = document.createElement('li')
      document.querySelector(".cards").prepend(liEl)
     liEl.setAttribute("class", "card")
 
     const h2El = document.createElement('h2')
-    h2El.textContent = 'Bulbasaur'
+    h2El.textContent = title
     h2El.setAttribute("class", "card--title")
     document.querySelector('li').prepend(h2El)
 
     const imgEl = document.createElement('img')
     imgEl.setAttribute("class", "card--img")
     document.querySelector('li').append(imgEl)
-    imgEl.attributes("width", "256")
-    imgEl.src = pokemon.sprites.other["official-artwork"].front_default;
+    imgEl.src = image
+
 
     const ulPower = document.createElement('ul')
     ulPower.setAttribute("class", "card--text")
@@ -77,4 +73,24 @@ function createCards() {
 
 }
 
-createCards ()
+
+// - Use the official-artwork object key as the images for the card. The images are all inside of the sprites key, in each pokemon object
+// pokemon.sprites.other['official-artwork'].front_default
+
+// - Render all the cards on the page that represents all the pokemons, recreating the same layout, using JS
+
+
+
+createCards('Bulbasaur',data[0].sprites.other['official-artwork'].front_default)
+
+createCards('Ivysaur',data[1].sprites.other['official-artwork'].front_default)
+
+createCards('Venusaur',data[2].sprites.other['official-artwork'].front_default)
+
+createCards('Charmander',data[3].sprites.other['official-artwork'].front_default)
+
+createCards('Charmeleon',data[4].sprites.other['official-artwork'].front_default)
+
+createCards('Charizard',data[5].sprites.other['official-artwork'].front_default)
+
+createCards('Squirtle',data[6].sprites.other['official-artwork'].front_default)
